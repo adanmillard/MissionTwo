@@ -1,0 +1,11 @@
+/* Globals */
+
+*{
+    box-sizing: border-box;
+    
+    width: 100%;
+}
+
+body{
+    margin: 0;
+}
