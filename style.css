@@ -132,7 +132,7 @@ h1 {
 
 .icon {
   /* background-color: #bbb; */
-  width: 30%;
+  max-width: 50%;
   height: auto;
   flex: 1;
   margin-top: 2%;
