@@ -7,6 +7,7 @@
 }
 
 body {
+  width: 100%;
   margin: 0;
   padding: 0;
   font-family: yeezy, Arial, Helvetica, sans-serif;
@@ -22,6 +23,7 @@ body {
   /* background-color: black; */
   height: 100vh;
   display: flex;
+  width: 100%;
   /* background-color: #faf9f9; */
   background-color: #f0efeb;
 }
@@ -30,7 +32,7 @@ body {
   /* border: 1px solid red; */
 
   z-index: 1;
-  max-width: 1000px;
+  max-width: 80%;
   position: relative;
   margin: auto;
 }
@@ -114,7 +116,7 @@ h1 {
   background-color: #faf9f9;
   /* background-color: #f0efeb; */
   /* display: flex; */
-
+  width: 100%;
   display: flex;
   /* border: 1px solid purple; */
 }
@@ -154,7 +156,7 @@ h1 {
 }
 
 .imgshoe {
-  width: 90%;
+  width: 70%;
   height: auto;
 }
 
@@ -163,6 +165,7 @@ h1 {
 .flex-mailing {
   display: flex;
   height: 90vh;
+  width: 100%;
   /* background-color: #faf9f9; */
   background-color: #f0efeb;
   /* border: 1px solid red; */
@@ -244,6 +247,7 @@ button[type="submit"]:hover {
   color: white;
 }
 .flex-footer {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -342,16 +346,38 @@ button[type="submit"]:hover {
   }
 
   .fa-solid {
-    font-size: 2rem;
+    font-size: 100%;
   }
 
   .fa-regular {
-    font-size: 2rem;
+    font-size: 100%;
   }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (min-width: 320px) and (max-width: 570px) {
   h1 {
-    font-size: 4.5rem;
+    font-size: 130%;
+  }
+  body {
+    min-width: 100%;
+  }
+
+  .flex-header {
+    min-width: fit-content;
+  }
+
+  .info-left {
+    margin-top: 25%;
+  }
+
+  .icon p {
+    font-size: 0.7rem;
+  }
+  .kanyeimg {
+    width: 50%;
+    height: auto;
+  }
+  .kw-quote p {
+    width: 100%;
   }
 }
