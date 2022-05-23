@@ -31,22 +31,21 @@ body {
 .slideshow-yeezy {
   /* border: 1px solid red; */
 
-  z-index: 1;
   max-width: 80%;
   position: relative;
   margin: auto;
 }
 
 .yeezy {
-  /* display: none; */
+  display: none;
 
   /* border: 1px solid red; */
   /* background-color: aqua; */
   position: relative;
-  left: 0px;
+  /* left: 0px;
   top: 0px;
-  z-index: 0;
-  margin-left: 10%;
+
+  margin-left: 10%; */
 }
 
 .prev,
@@ -231,7 +230,7 @@ input[type="name"] {
   box-shadow: 1px 1px white, 3px 3px black;
 }
 
-button[type="submit"] {
+input[type="button"] {
   align-self: center;
   width: 50%;
   padding: 12px 20px;
@@ -242,7 +241,7 @@ button[type="submit"] {
   background-color: white;
 }
 
-button[type="submit"]:hover {
+input[type="button"]:hover {
   background-color: black;
   color: white;
 }
@@ -325,6 +324,14 @@ button[type="submit"]:hover {
     margin-left: 2%;
     margin-right: 2%;
   }
+
+  .fa-regular {
+    font-size: 2.8rem;
+  }
+
+  .fa-solid {
+    font-size: 2.8rem;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -346,11 +353,11 @@ button[type="submit"]:hover {
   }
 
   .fa-solid {
-    font-size: 100%;
+    font-size: 2rem;
   }
 
   .fa-regular {
-    font-size: 100%;
+    font-size: 2rem;
   }
 }
 

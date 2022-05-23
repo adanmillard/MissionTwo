@@ -10,19 +10,18 @@
       src="https://kit.fontawesome.com/78fa6c417d.js"
       crossorigin="anonymous"
     ></script>
-    <script src="main.js"></script>
   </head>
   <body>
     <!-- nav -->
     <!-- <div class="nav">
-        <button class="Menu">Menu</button>
-        <div class="dropdown">
-
+      <button class="Menu">Menu</button>
+      <div class="dropdown">
+          
             <a href="#">Home</a>
             <a href="#">Information</a>
             <a href="#">Join Mailing</a>
-        </div>
-    </div> -->
+          </div>
+        </div> -->
     <!-- Heading -->
     <header>
       <div class="flex-header">
@@ -31,33 +30,28 @@
           <!-- images -->
           <div class="yeezy fade">
             <img
-              src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-light-211338_600x.png?v=1638814849"
+              src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-light-211338_1200x.png?v=1638814849"
               width="100%"
             />
           </div>
           <div class="yeezy fade">
-            <!-- <img
+            <img
               src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-static-black-reflective-112774_2000x.png?v=1638814850"
-              width="70%"
-            /> -->
+              width="100%"
+            />
           </div>
           <div class="yeezy fade">
-            <!-- <img
+            <img
               src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-zebra-504922_2000x.png?v=1638814882"
-              width="70%"
-            /> -->
+              width="100%"
+            />
           </div>
           <!-- next and previous buttons -->
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <br />
-        <!-- the dots/circles -->
-        <!-- <div style="text-align: center;">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div> -->
+
         <div class="text">
           <h1>YEEZY</h1>
           <h1>BOOST</h1>
@@ -120,7 +114,7 @@
       <div class="flex-mailing">
         <div class="kw-quote">
           <img src="kayne-west.png" class="kanyeimg" />
-          <p>
+          <p id="kw-quote">
             <i>
               "If you have the opportunity to play this game called life, you
               have to appreciate every moment. A lot of people don't appreciate
@@ -129,17 +123,19 @@
           </p>
           <h2>-Kanye West</h2>
         </div>
-        <div class="email">
-          <form action="">
+        <div class="email" id="email-form">
+          <form action="" class="a pre-order" id="a">
             <h2>Pre order Yeezys here:</h2>
             <input type="email" name="email" id="email" placeholder="Email" />
+            <!-- required -->
             <input
               type="name"
               name="name"
               id="name"
               placeholder="First/Last name"
             />
-            <button type="submit">Join Pre-Order</button>
+            <!-- required -->
+            <input type="button" name="submit" id="submit" value="Pre-Order" />
           </form>
         </div>
       </div>
@@ -149,5 +145,6 @@
         <p>Adidas - Yeezy Boost, Copyright 2022.</p>
       </div>
     </footer>
+    <script src="yeezy.js"></script>
   </body>
 </html>
