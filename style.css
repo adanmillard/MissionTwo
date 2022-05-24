@@ -144,6 +144,7 @@ h1 {
 
 .fa {
   flex-shrink: 1;
+  font-size: 4rem;
 }
 
 .shoe-pic {
@@ -283,6 +284,10 @@ input[type="button"]:hover {
 
   .shoe-pic {
     max-width: 100%;
+  }
+
+  .fa {
+    font-size: 3rem;
   }
 }
 
