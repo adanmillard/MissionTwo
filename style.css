@@ -231,7 +231,7 @@ input[type="name"] {
   box-shadow: 1px 1px white, 3px 3px black;
 }
 
-input[type="button"] {
+input[type="submit"] {
   align-self: center;
   width: 50%;
   padding: 12px 20px;
@@ -242,7 +242,7 @@ input[type="button"] {
   background-color: white;
 }
 
-input[type="button"]:hover {
+input[type="submit"]:hover {
   background-color: black;
   color: white;
 }
@@ -262,6 +262,31 @@ input[type="button"]:hover {
 
 .flex-footer p:hover {
   color: yellow;
+}
+
+.confirmation {
+  padding: 12px 5px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  font-family: yeezy, Arial, Helvetica, sans-serif;
+  font-size: large;
+
+  background-color: yellow;
+  /* background-color: #f0efeb; */
+  box-shadow: 1px 1px white, 3px 3px black;
+}
+
+.error {
+  padding: 12px 5px;
+  margin: 15px 0;
+  box-sizing: border-box;
+  font-family: yeezy, Arial, Helvetica, sans-serif;
+  font-size: large;
+  text-align: center;
+  background-color: yellow;
+
+  /* background-color: #f0efeb; */
+  box-shadow: 1px 1px white, 3px 3px black;
 }
 
 @media screen and (max-width: 1699px) {
