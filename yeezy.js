@@ -35,9 +35,9 @@ const userName = document.getElementById("name");
 const btn = document.getElementById("submit");
 const form = document.getElementById("a");
 const errorMsg = document.getElementById("error");
-let timeOut = setTimeout(() => errorMsg.remove(), 3000);
+let timeOut = setTimeout(() => errorMsg.remove(), 5000);
 
-form.addEventListener("submit", onClick);
+btn.addEventListener("click", onClick);
 
 function onClick(e) {
   e.preventDefault();
@@ -94,3 +94,20 @@ const countDownTimer = setInterval(function () {
       "Launch has already started";
   }
 }, 1000);
+
+// video pause/play
+
+const video = document.getElementById("video-kw");
+const pauseBtn = document.getElementById("mybtn");
+
+video.addEventListener("click", pausePlay);
+
+function pausePlay() {
+  if (video.paused) {
+    video.play();
+    pauseBtn.innerHTML = "pause";
+  } else {
+    video.pause();
+    pauseBtn.innerHTML = "play";
+  }
+}
