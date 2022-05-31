@@ -14,16 +14,6 @@
     ></script>
   </head>
   <body>
-    <!-- nav -->
-    <!-- <div class="nav">
-      <button class="Menu">Menu</button>
-      <div class="dropdown">
-          
-            <a href="#">Home</a>
-            <a href="#">Information</a>
-            <a href="#">Join Mailing</a>
-          </div>
-        </div> -->
     <!-- Heading -->
     <div class="countdown"><p id="countdown"></p></div>
     <header class="video">
@@ -34,6 +24,7 @@
         <button id="mybtn">Play</button>
       </div>
     </header>
+
     <section>
       <div class="flex-header">
         <!-- slideshow container -->
@@ -41,21 +32,73 @@
           <!-- images -->
           <div class="yeezy fade">
             <img
-              src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-light-211338_1200x.png?v=1638814849"
+              src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-beluga-20-978134_5000x.png?v=1638814797"
               width="100%"
             />
+            <div class="text-shoe">Beluga</div>
+          </div>
+          <div class="yeezy fade">
+            <img
+              src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-beluga-20-322084_2000x.png?v=1638814797"
+              width="100%"
+            />
+            <div class="text-shoe">Beluga</div>
           </div>
           <div class="yeezy fade">
             <img
               src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-static-black-reflective-112774_2000x.png?v=1638814850"
               width="100%"
             />
+            <div class="text-shoe">Static Black Reflective</div>
+          </div>
+          <div class="yeezy fade">
+            <img
+              src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-static-black-reflective-570776_2000x.png?v=1638814851"
+              width="100%"
+            />
+            <div class="text-shoe">Static Black Reflective</div>
           </div>
           <div class="yeezy fade">
             <img
               src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-zebra-504922_2000x.png?v=1638814882"
               width="100%"
             />
+            <div class="text-shoe">Zebra</div>
+          </div>
+          <div class="yeezy fade">
+            <img
+              src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-zebra-241756_2000x.png?v=1638814882"
+              width="100%"
+            />
+            <div class="text-shoe">Zebra</div>
+          </div>
+          <div class="yeezy fade">
+            <img
+              src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-semi-frozen-yellow-325428_2000x.png?v=1638814845"
+              width="100%"
+            />
+            <div class="text-shoe">Semi Frozen Yellow</div>
+          </div>
+          <div class="yeezy fade">
+            <img
+              src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-semi-frozen-yellow-821975_2000x.png?v=1638814845"
+              width="100%"
+            />
+            <div class="text-shoe">Semi Frozen Yellow</div>
+          </div>
+          <div class="yeezy fade">
+            <img
+              src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-true-form-720250_2000x.png?v=1638814896"
+              width="100%"
+            />
+            <div class="text-shoe">True Form</div>
+          </div>
+          <div class="yeezy fade">
+            <img
+              src="https://cdn.shopify.com/s/files/1/2358/2817/products/yeezy-boost-350-v2-true-form-410873_2000x.png?v=1638814896"
+              width="100%"
+            />
+            <div class="text-shoe">True Form</div>
           </div>
           <!-- next and previous buttons -->
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -145,8 +188,30 @@
               id="name"
               placeholder="First/Last name"
             />
+            <label for="size">Size:</label>
+            <select name="size" id="shoe-size">
+              <option value="8" class="shoe-size">8</option>
+              <option value="9" class="shoe-size">9</option>
+              <option value="10" class="shoe-size">10</option>
+              <option value="11" class="shoe-size">11</option>
+              <option value="12" class="shoe-size">12</option>
+              <option value="13" class="shoe-size">13</option>
+              <option value="14" class="shoe-size">14</option>
+            </select>
+            <label for="color">Color:</label>
+            <select name="color" id="shoe-color">
+              <option value="Beluga" class="shoe-color">Beluga</option>
+              <option value="Staticblackreflective" class="shoe-color">
+                Static Black Reflective
+              </option>
+              <option value="Zebra" class="shoe-color">Zebra</option>
+              <option value="Semifrozenyellow" class="shoe-color">
+                Semi Frozen Yellow
+              </option>
+              <option value="trueform" class="shoe-color">True Form</option>
+            </select>
             <!-- required -->
-            <input type="submit" name="submit" id="submit" value="Pre-Order" />
+            <input type="button" name="submit" id="submit" value="Pre-Order" />
             <p id="error"></p>
           </form>
         </div>

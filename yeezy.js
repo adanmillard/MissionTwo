@@ -28,48 +28,6 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
-// Email confirmation
-const thanksMsg = document.getElementById("kw-quote");
-const userEmail = document.getElementById("email");
-const userName = document.getElementById("name");
-const btn = document.getElementById("submit");
-const form = document.getElementById("a");
-const errorMsg = document.getElementById("error");
-let timeOut = setTimeout(() => errorMsg.remove(), 5000);
-
-btn.addEventListener("click", onClick);
-
-function onClick(e) {
-  e.preventDefault();
-  // validateEmail();
-  emailChecker();
-}
-
-function emailChecker() {
-  let gmail = userEmail.value.search("@gmail");
-  let hotmail = userEmail.value.search("@hotmail");
-  let yahoo = userEmail.value.search("@yahoo");
-  // console.log(gmail);
-  // console.log(hotmail);
-  // console.log(yahoo);
-  if (gmail >= 0 || yahoo >= 0 || hotmail >= 0) {
-    thanksMsg.innerHTML = `" Thanks ${userName.value}, we will be sending you a confirmation Email to: ${userEmail.value}. "`;
-    thanksMsg.classList.add("confirmation");
-    userEmail.style.backgroundColor = "lightgrey";
-    userName.style.backgroundColor = "lightgrey";
-    btn.disabled = true;
-    userEmail.disabled = true;
-    userName.disabled = true;
-    // console.log("true");
-  } else {
-    errorMsg.classList.add("error");
-    errorMsg.innerHTML = "please enter all fields with correct email format.";
-    timeOut();
-
-    // console.log("false");
-  }
-}
-
 // countdown timer
 const countDownDate = new Date("June 1, 2022 16:30:00").getTime();
 
@@ -101,6 +59,7 @@ const video = document.getElementById("video-kw");
 const pauseBtn = document.getElementById("mybtn");
 
 video.addEventListener("click", pausePlay);
+pauseBtn.addEventListener("click", pausePlay);
 
 function pausePlay() {
   if (video.paused) {
@@ -110,4 +69,41 @@ function pausePlay() {
     video.pause();
     pauseBtn.innerHTML = "play";
   }
+}
+
+// Email confirmation
+const thanksMsg = document.getElementById("kw-quote");
+const userEmail = document.getElementById("email");
+const userName = document.getElementById("name");
+const btn = document.getElementById("submit");
+const errorMsg = document.getElementById("error");
+
+btn.addEventListener("click", onClick);
+
+function onClick() {
+  emailChecker();
+}
+
+function emailChecker() {
+  let gmail = userEmail.value.search("@gmail");
+  let hotmail = userEmail.value.search("@hotmail");
+  let yahoo = userEmail.value.search("@yahoo");
+  if (gmail >= 0 || yahoo >= 0 || hotmail >= 0) {
+    errorMsg.innerHTML = "";
+    errorMsg.classList.remove("error");
+    thanksMsg.innerHTML = `" Thanks ${userName.value}, we will be sending you a confirmation Email to: ${userEmail.value}. "`;
+    thanksMsg.classList.add("confirmation");
+    userEmail.style.backgroundColor = "lightgrey";
+    userName.style.backgroundColor = "lightgrey";
+    disableInputs();
+  } else {
+    errorMsg.classList.add("error");
+    errorMsg.innerHTML = "please enter all fields with correct email format.";
+  }
+}
+
+function disableInputs() {
+  btn.disabled = true;
+  userEmail.disabled = true;
+  userName.disabled = true;
 }
