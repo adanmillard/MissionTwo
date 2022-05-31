@@ -36,7 +36,7 @@ const countDownTimer = setInterval(function () {
   const timeToCountdown = countDownDate - todaysDate;
   const days = Math.floor(timeToCountdown / (1000 * 60 * 60 * 24));
   const hours = Math.floor(
-    (timeToCountdown % (1000 * 60 * 60)) / (1000 * 60 * 60)
+    (timeToCountdown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
   );
   const minutes = Math.floor(
     (timeToCountdown % (1000 * 60 * 60)) / (1000 * 60)
@@ -106,4 +106,28 @@ function disableInputs() {
   btn.disabled = true;
   userEmail.disabled = true;
   userName.disabled = true;
+}
+
+// Modal
+
+const modal = document.getElementById("modal");
+const opener = document.getElementById("thankyou");
+const span = document.getElementsByClassName("close")[0];
+
+opener.addEventListener("click", thankYouModal);
+span.addEventListener("click", closeModal);
+window.addEventListener("click", outsideModalClose);
+
+function thankYouModal() {
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+function outsideModalClose(e) {
+  if (e.target == modal) {
+    modal.style.display = "none";
+  }
 }
